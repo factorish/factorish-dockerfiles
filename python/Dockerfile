@@ -31,6 +31,6 @@ RUN curl -sSL -o /usr/local/bin/etcdctl https://s3-us-west-2.amazonaws.com/opdem
 && chmod +x /usr/local/bin/etcdctl \
 && curl -sSL -o /usr/local/bin/confd https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64 \
 && chmod +x /usr/local/bin/confd \
-&& mdkir /app
+&& mkdir /app
 
 WORKDIR /app
