@@ -15,6 +15,7 @@ RUN \
   net-tools \
   sudo \
   wget \
+  curl \
   vim \
   strace \
   lsof \
