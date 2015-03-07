@@ -11,6 +11,7 @@ RUN \
   apt-get update -yq && \
   apt-get install -yq \
   make \
+  curl \
   ca-certificates \
   net-tools \
   sudo \
@@ -22,7 +23,7 @@ RUN \
   lsb-release \
   locales \
   socat \
-  supervisor \
+  runit \
   --no-install-recommends && \
   locale-gen en_US.UTF-8
 
