@@ -24,6 +24,7 @@ RUN \
   locales \
   socat \
   supervisor \
+  runit \
   --no-install-recommends && \
   locale-gen en_US.UTF-8
 
