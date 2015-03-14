@@ -30,10 +30,14 @@ RUN \
 
 # install etcdctl and confd
 RUN curl -sSL -o /usr/local/bin/etcdctl https://s3-us-west-2.amazonaws.com/opdemand/etcdctl-v0.4.6 \
-  && chmod +x /usr/local/bin/etcdctl \
-  && curl -sSL -o /usr/local/bin/confd https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64 \
+  && curl -sSL -o /usr/local/bin/confd https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64
+
+ADD my_init /usr/local/bin/my_init
+
+RUN \
+  chmod +x /usr/local/bin/etcdctl \
   && chmod +x /usr/local/bin/confd \
-  && mkdir -p /etc/service \
+  && chmod +x /usr/local/bin/my_init \
   && mkdir /app
 
 WORKDIR /app
